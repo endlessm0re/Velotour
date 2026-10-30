@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- რესპონსიულობისთვის: გვერდის სიგანე = ეკრანის სიგანე -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="აღმოაჩინე თბილისი ველოსიპედით — ველოტურები გიდთან ერთად." />
+  <title>ველოტური – ველოსიპედით თბილისში</title>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- დამატებითი CSS ფაილი -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+  <!-- ===================== Header Section ===================== -->
+  <!-- sticky top-0: გადახვევისას მენიუ ზემოთ რჩება; z-20: სხვა ელემენტებზე მაღლა ჩანს -->
+  <header class="sticky top-0 z-20 bg-white/95 border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+      <!-- ლოგო -->
+      <a href="#top" class="text-2xl font-bold text-emerald-800">ველოტური<span class="text-orange-500">.</span></a>
+
+      <!-- დესკტოპის მენიუ: მობილურზე დამალულია, md-დან ჩანს -->
+      <ul class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <li><a href="#top" class="hover:text-emerald-600 transition-colors">მთავარი</a></li>
+        <li><a href="#features" class="hover:text-emerald-600 transition-colors">მარშრუტები</a></li>
+        <li><a href="#about" class="hover:text-emerald-600 transition-colors">ჩვენ შესახებ</a></li>
+        <li><a href="#contact" class="hover:text-emerald-600 transition-colors">კონტაქტი</a></li>
+      </ul>
+
+      <!-- მობილური მენიუ: details/summary მუშაობს JavaScript-ის გარეშე -->
+      <details class="relative md:hidden">
+        <summary class="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium">
+          მენიუ
+        </summary>
+        <ul class="absolute right-0 mt-2 w-44 rounded-md border border-slate-200 bg-white p-2 shadow-lg text-sm">
+          <li><a href="#top" class="block rounded px-3 py-2 hover:bg-slate-100">მთავარი</a></li>
+          <li><a href="#features" class="block rounded px-3 py-2 hover:bg-slate-100">მარშრუტები</a></li>
+          <li><a href="#about" class="block rounded px-3 py-2 hover:bg-slate-100">ჩვენ შესახებ</a></li>
+          <li><a href="#contact" class="block rounded px-3 py-2 hover:bg-slate-100">კონტაქტი</a></li>
+        </ul>
+      </details>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== Hero Section ===================== -->
+    <section class="bg-emerald-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-orange-300 font-semibold tracking-wide uppercase text-sm">აღმოაჩინე ქალაქი სხვანაირად</p>
+          <h1 class="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            გაიცანი თბილისი ველოსიპედით
+          </h1>
+          <p class="mt-6 text-lg text-emerald-100 max-w-xl">
+            მოკლე ველოტურები გიდთან ერთად: ძველი უბნები, ბოტანიკური ბაღი და მტკვრის სანაპირო.
+            აირჩიე მარშრუტი და აღმოაჩინე ქალაქის ახალი მხარე.
+          </p>
+          <a href="#features"
+            class="mt-8 inline-block rounded-lg bg-orange-400 px-8 py-3 font-semibold text-emerald-950 hover:bg-orange-300 transition-colors">
+            იხილე მარშრუტები
+          </a>
+        </div>
+
+        <!-- მთავარი ფოტო; alt აღწერს ფოტოს ეკრანის წამკითხველებისთვის -->
+        <div class="overflow-hidden rounded-2xl shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1200&q=85"
+            alt="ველოსიპედი მწვანე ბუნების ფონზე" class="h-72 md:h-96 w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Features / Routes Section ===================== -->
+    <section id="features" class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-emerald-700 font-semibold text-sm uppercase tracking-wide">აირჩიე შენი თავგადასავალი</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold">ჩვენი მარშრუტები</h2>
+        <p class="mt-4 text-slate-600">სამი განსხვავებული გზა თბილისის აღმოსაჩენად — დამწყებიდან გამოცდილ
+          ველომოყვარულამდე.</p>
+      </div>
+
+      <!-- grid-cols-1: მობილურზე ერთი სვეტი; md:grid-cols-3: დიდ ეკრანზე სამი სვეტი -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- ბარათი 1 -->
+        <article
+          class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-shadow">
+          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85"
+            alt="ქალაქის ქუჩები და შენობები" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-sm font-semibold text-orange-600">დაახლოებით 2 საათი</p>
+            <h3 class="mt-2 text-xl font-semibold text-emerald-800">ძველი თბილისი</h3>
+            <p class="mt-3 text-slate-600">აბანოთუბანი, ნარიყალას მიდამოები და ვიწრო ქუჩები. მშვიდი ტემპი და ქალაქის
+              ისტორიული ხედები.</p>
+          </div>
+        </article>
+
+        <!-- ბარათი 2 -->
+        <article
+          class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-shadow">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=85"
+            alt="მწვანე ხეები და ბუნებაში გამავალი გზა" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-sm font-semibold text-orange-600">დაახლოებით 1.5 საათი</p>
+            <h3 class="mt-2 text-xl font-semibold text-emerald-800">მტკვრის სანაპირო</h3>
+            <p class="mt-3 text-slate-600">მარტივი და შედარებით ბრტყელი მარშრუტი მდინარის გასწვრივ. კარგი არჩევანია
+              დამწყებთათვის.</p>
+          </div>
+        </article>
+
+        <!-- ბარათი 3 -->
+        <article
+          class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-shadow">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85"
+            alt="ბოტანიკური ბაღის მსგავსი მწვანე ბუნებრივი გარემო" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-sm font-semibold text-orange-600">დაახლოებით 2.5 საათი</p>
+            <h3 class="mt-2 text-xl font-semibold text-emerald-800">ბოტანიკური ბაღი</h3>
+            <p class="mt-3 text-slate-600">უფრო აღმართიანი მარშრუტი ლამაზი ხედებით. შესაძლებელია ელექტრო ველოსიპედის
+              არჩევაც.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== About Section ===================== -->
+    <section id="about" class="bg-emerald-50">
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-emerald-700 font-semibold text-sm uppercase tracking-wide">ჩვენ შესახებ</p>
+          <h2 class="mt-2 text-3xl font-bold">ქალაქი, მოძრაობა და კარგი გამოცდილება</h2>
+          <p class="mt-5 text-slate-600 leading-relaxed">
+            ველოტური არის სასწავლო პროექტის ფარგლებში შექმნილი ვებსაიტის მაგალითი.
+            მისი იდეაა, სტუმრებსა და ადგილობრივებს თბილისი ველოსიპედით დაათვალიერებინოს.
+            მარშრუტები აღწერილია მარტივად, რათა წინასწარ შეარჩიო შენთვის სასურველი ტური.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-emerald-800">რატომ ველოტური?</h3>
+          <ul class="mt-5 space-y-4 text-slate-700">
+            <li class="flex gap-3"><span class="font-bold text-orange-500">✓</span><span>მარშრუტები სხვადასხვა
+                გამოცდილების მქონე ადამიანებისთვის</span></li>
+            <li class="flex gap-3"><span class="font-bold text-orange-500">✓</span><span>ქალაქის საინტერესო ადგილების
+                აღმოჩენა</span></li>
+            <li class="flex gap-3"><span class="font-bold text-orange-500">✓</span><span>მოქნილი და სასიამოვნო აქტივობა
+                ღია ცის ქვეშ</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== Footer / Contact Section ===================== -->
+  <footer id="contact" class="bg-slate-900 text-slate-300">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div>
+          <a href="#top" class="text-2xl font-bold text-white">ველოტური<span class="text-orange-400">.</span></a>
+          <p class="mt-3 text-sm text-slate-400">აღმოაჩინე თბილისი ორი ბორბლით.</p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-white">კონტაქტი</h2>
+          <!-- ეს არის დემო მისამართი; ჩაანაცვლე რეალური ელფოსტით, თუ საიტი რეალურად გამოიყენება -->
+          <a href="mailto:hello@veloturi.ge" class="mt-3 inline-block text-sm hover:text-white transition-colors">
+            hello@veloturi.ge
+          </a>
+          <p class="mt-2 text-xs text-slate-500">სასწავლო პროექტის მაგალითი</p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-white">სოციალური ქსელები</h2>
+          <!-- ბმულები გადაყავს პლატფორმების მთავარ გვერდებზე; რეალურ საიტზე ჩასვი შენი პროფილების მისამართები -->
+          <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors">Facebook</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
+        &copy; 2026 ველოტური. ყველა უფლება დაცულია.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
